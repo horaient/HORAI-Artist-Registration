@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The First Hour (Genesis) — HORAI Entertainment</title>
+<meta name="description" content="The First Hour (Genesis) — HORAI Entertainment's opening night. 26 August, Exhibition Hall, Maison de la Culture Ben Arous. Free entry.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="horai-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Nunito+Sans:wght@300;400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --onyx:#0b0b0a;
+    --panel:#141210;
+    --gold:#c9a15d;
+    --brass:#a88c62;
+    --bone:#f2ede1;
+    --bone-dim:#a8a196;
+    --rust:#7c3f2d;
+    --line: rgba(201,161,93,0.22);
+    --maxw: 880px;
+    --ease: cubic-bezier(.22,.61,.36,1);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  html,body{margin:0;padding:0;background:var(--onyx);color:var(--bone);font-family:'Nunito Sans',sans-serif;overflow-x:hidden;}
+  ::selection{background:var(--gold);color:var(--onyx);}
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+  .eyebrow{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin:0 0 18px 0;}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:500;margin:0;color:var(--bone);}
+  p{line-height:1.75;color:var(--bone-dim);font-weight:300;margin:0 0 16px 0;}
+  .section{padding:90px 0;border-bottom:1px solid var(--line);}
+  .section:last-of-type{border-bottom:none;}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:15px 26px;border:1px solid var(--gold);transition:all .25s var(--ease);cursor:pointer;background:none;text-decoration:none;}
+  .btn.solid{background:var(--gold);color:var(--onyx);}
+  .btn.solid:hover{background:var(--bone);border-color:var(--bone);}
+  .btn:disabled{opacity:.5;cursor:not-allowed;}
+
+  /* seed of life ambient motif */
+  .seedfield{position:absolute;inset:-10%;pointer-events:none;opacity:.06;z-index:0;overflow:hidden;}
+  .seedfield svg{width:100%;height:100%;animation:spin 220s linear infinite;}
+  @keyframes spin{to{transform:rotate(360deg);}}
+  @media (prefers-reduced-motion: reduce){ .seedfield svg{animation:none;} }
+
+  /* ---- COVER ---- */
+  .cover{min-height:96vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:90px 32px;position:relative;background:
+    radial-gradient(ellipse at 50% 25%, rgba(201,161,93,0.10), transparent 60%), var(--onyx);}
+  .cover .mark{width:110px;margin-bottom:26px;}
+  .cover .brandline{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.4em;text-transform:uppercase;color:var(--brass);}
+  .cover h1{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(40px,7vw,84px);color:var(--gold);margin-top:22px;line-height:1.08;}
+  .cover .sub{font-family:'Nunito Sans',sans-serif;font-weight:300;font-size:17px;color:var(--bone-dim);margin-top:20px;max-width:460px;}
+  .free-badge{display:inline-block;margin-top:26px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);border:1px solid var(--line);padding:8px 18px;}
+  .cover .ctas{margin-top:38px;}
+  .countdown{margin-top:44px;display:flex;gap:28px;}
+  .countdown .u{text-align:center;}
+  .countdown .n{font-family:'Fraunces',serif;font-size:34px;color:var(--bone);}
+  .countdown .l{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin-top:4px;}
+
+  /* ---- DETAILS ---- */
+  .details{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:50px;}
+  .detail{background:var(--onyx);padding:34px 30px;}
+  .detail .n{font-family:'Space Mono',monospace;color:var(--brass);font-size:11px;letter-spacing:.2em;}
+  .detail h3{font-size:21px;font-weight:400;font-style:italic;margin:14px 0 6px;}
+  .detail .v{font-family:'Nunito Sans',sans-serif;font-weight:400;color:var(--bone);font-size:16px;}
+  .detail .note{font-size:13px;color:var(--bone-dim);margin-top:6px;}
+  .detail a.dir{display:inline-block;margin-top:10px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold);}
+
+  /* ---- DISCIPLINES ---- */
+  .disciplines{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:50px;}
+  .disc{background:var(--onyx);padding:26px 16px;text-align:center;}
+  .disc .n{font-family:'Space Mono',monospace;color:var(--brass);font-size:10px;letter-spacing:.14em;}
+  .disc h4{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:18px;margin:10px 0 0;color:var(--bone);}
+
+  /* ---- RSVP ---- */
+  .rsvpbox{margin-top:50px;border:1px solid var(--line);background:var(--panel);padding:44px;}
+  .field{margin-bottom:22px;}
+  label{display:block;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin-bottom:8px;}
+  input, select{width:100%;background:transparent;border:none;border-bottom:1px solid var(--line);color:var(--bone);font-family:'Nunito Sans',sans-serif;font-size:15px;padding:9px 2px;font-weight:300;}
+  select{appearance:none;-webkit-appearance:none;}
+  select option{background:var(--panel);color:var(--bone);}
+  input:focus, select:focus{outline:none;border-color:var(--gold);}
+  .hp-field{position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;}
+  .formstatus{display:none;margin-top:18px;font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.04em;line-height:1.6;padding:14px 16px;border:1px solid var(--line);align-items:flex-start;gap:10px;}
+  .formstatus.show{display:flex;}
+  .formstatus.sending{border-color:var(--line);color:var(--bone-dim);}
+  .formstatus.success{border-color:var(--gold);color:var(--gold);background:rgba(201,161,93,0.08);}
+  .formstatus.error{border-color:var(--rust);color:#e0a08c;background:rgba(124,63,45,0.14);}
+
+  /* ---- CONTACT ---- */
+  .contact-row{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;margin-top:40px;padding:26px 30px;border:1px solid var(--line);}
+  .contact-row .label{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);}
+  .contact-row .phone{font-family:'Fraunces',serif;font-style:italic;font-size:26px;color:var(--gold);text-decoration:none;}
+
+  footer{padding:50px 0;text-align:center;}
+  footer img{width:32px;margin:0 auto 14px;opacity:.7;}
+  footer p{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--brass);margin:0;}
+
+  @media(max-width:700px){
+    .details, .disciplines{grid-template-columns:1fr 1fr;}
+    .rsvpbox{padding:30px 24px;}
+    .contact-row{flex-direction:column;align-items:flex-start;}
+    .countdown{gap:18px;}
+    .countdown .n{font-size:26px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<section class="cover" id="top">
+  <div class="seedfield">
+    <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" stroke="#c9a15d" fill="none" stroke-width="1">
+      <g transform="translate(200,200)">
+        <circle r="80"/><circle cx="0" cy="-80" r="80"/><circle cx="0" cy="80" r="80"/>
+        <circle cx="69.3" cy="-40" r="80"/><circle cx="69.3" cy="40" r="80"/>
+        <circle cx="-69.3" cy="-40" r="80"/><circle cx="-69.3" cy="40" r="80"/>
+      </g>
+    </svg>
+  </div>
+  <img class="mark" src="horai-mark.png" alt="HORAI Entertainment mark">
+  <div class="brandline">HORAI Entertainment Presents</div>
+  <h1>The First Hour<br><em>(Genesis)</em></h1>
+  <p class="sub">The opening night of our free cultural event series — music, dance, DJ sets, and fine art under one roof.</p>
+  <div class="free-badge">Free Entry</div>
+  <div class="countdown" id="countdown"></div>
+  <div class="ctas">
+    <a class="btn solid" href="#rsvp">RSVP now</a>
+  </div>
+</section>
+
+<!-- DETAILS -->
+<section class="section" id="details">
+  <div class="wrap">
+    <div class="eyebrow">Event Details</div>
+    <h2>Everything you need to know.</h2>
+    <div class="details">
+      <div class="detail">
+        <div class="n">Date</div>
+        <h3>26 August</h3>
+        <div class="v">Tuesday</div>
+      </div>
+      <div class="detail">
+        <div class="n">Time</div>
+        <h3>To be confirmed</h3>
+        <div class="note">Follow <a href="https://www.instagram.com/horai_entertainment/" target="_blank">@horai.entertainment</a> for the exact hour.</div>
+      </div>
+      <div class="detail">
+        <div class="n">Venue</div>
+        <h3>Exhibition Hall</h3>
+        <div class="v">Maison de la Culture Ben Arous</div>
+        <a class="dir" href="https://www.google.com/maps/search/?api=1&query=Maison%20de%20la%20Culture%20Ben%20Arous" target="_blank" rel="noopener">Get directions →</a>
+      </div>
+      <div class="detail">
+        <div class="n">Entry</div>
+        <h3>Free</h3>
+        <div class="v">Open to all — RSVP appreciated</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DISCIPLINES -->
+<section class="section" id="disciplines">
+  <div class="wrap">
+    <div class="eyebrow">On the Night</div>
+    <h2>Four disciplines, one room.</h2>
+    <div class="disciplines">
+      <div class="disc"><div class="n">01</div><h4>Music</h4></div>
+      <div class="disc"><div class="n">02</div><h4>Dance</h4></div>
+      <div class="disc"><div class="n">03</div><h4>DJ</h4></div>
+      <div class="disc"><div class="n">04</div><h4>Fine Art</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- RSVP -->
+<section class="section" id="rsvp">
+  <div class="wrap">
+    <div class="eyebrow">RSVP</div>
+    <h2>Reserve your spot.</h2>
+    <p style="margin-top:16px;">Entry is free — RSVPing just helps us plan the room.</p>
+
+    <form class="rsvpbox" id="rsvpForm" novalidate>
+      <div class="field"><label for="name">Full name</label><input id="name" type="text" required></div>
+      <div class="field"><label for="phone">Phone / WhatsApp</label><input id="phone" type="tel" required></div>
+      <div class="field"><label for="guests">Number attending</label>
+        <select id="guests" required>
+          <option value="">Select one</option>
+          <option>Just me</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5+</option>
+        </select>
+      </div>
+      <div class="hp-field" aria-hidden="true">
+        <label for="hp">Leave this field empty</label>
+        <input type="text" id="hp" tabindex="-1" autocomplete="off">
+      </div>
+      <button type="submit" class="btn solid" id="submitBtn" style="width:100%;justify-content:center;">Confirm RSVP</button>
+      <div class="formstatus" id="formStatus" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Questions</div>
+    <div class="contact-row">
+      <div class="label">Call or WhatsApp</div>
+      <a class="phone" href="tel:+21651731358">51 731 358</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img src="horai-mark.png" alt="mark">
+  <p>Horai Entertainment · The First Hour (Genesis)</p>
+</footer>
+
+<script>
+  // ---- Countdown to 26 August ----
+  (function(){
+    const el = document.getElementById('countdown');
+    const now = new Date();
+    let year = now.getFullYear();
+    let target = new Date(year, 7, 26, 0, 0, 0); // month is 0-indexed: 7 = August
+    if (target < now) target = new Date(year + 1, 7, 26, 0, 0, 0);
+
+    function render(){
+      const diff = target - new Date();
+      if (diff <= 0) { el.innerHTML = ''; return; }
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      el.innerHTML = `
+        <div class="u"><div class="n">${d}</div><div class="l">Days</div></div>
+        <div class="u"><div class="n">${h}</div><div class="l">Hours</div></div>
+        <div class="u"><div class="n">${m}</div><div class="l">Min</div></div>`;
+    }
+    render();
+    setInterval(render, 60000);
+  })();
+
+  // ---- RSVP form -> Discord webhook ----
+  const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1536870915974107149/NG0uEdHWJ76bxXDLoy5NmWZqZxX5z9yg7GQzKw5a_dtww4i1iM32bWKSXGTqjFATblwg";
+
+  const rsvpForm = document.getElementById('rsvpForm');
+  const formStatus = document.getElementById('formStatus');
+  const submitBtn = document.getElementById('submitBtn');
+
+  function showStatus(type, message){
+    formStatus.className = 'formstatus show ' + type;
+    formStatus.textContent = message;
+  }
+
+  rsvpForm.addEventListener('submit', async function(e){
+    e.preventDefault();
+
+    if (document.getElementById('hp').value) return; // honeypot
+
+    if (!rsvpForm.checkValidity()) {
+      rsvpForm.reportValidity();
+      return;
+    }
+
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const guests = document.getElementById('guests').value;
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+    showStatus('sending', 'Sending your RSVP…');
+
+    const payload = {
+      username: "HORAI RSVP — The First Hour",
+      embeds: [{
+        title: "New RSVP — The First Hour (Genesis)",
+        color: 13214045,
+        fields: [
+          { name: "Name", value: name, inline: true },
+          { name: "Phone / WhatsApp", value: phone, inline: true },
+          { name: "Attending", value: guests, inline: true }
+        ],
+        timestamp: new Date().toISOString()
+      }]
+    };
+
+    try {
+      const res = await fetch(DISCORD_WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+
+      if (res.ok) {
+        showStatus('success', "You're on the list. See you on 26 August.");
+        submitBtn.textContent = 'RSVP confirmed ✓';
+        rsvpForm.querySelectorAll('input, select').forEach(el => el.disabled = true);
+      } else {
+        throw new Error('Discord responded with ' + res.status);
+      }
+    } catch (err) {
+      showStatus('error', "Something went wrong sending that. Try again, or just call/WhatsApp us directly.");
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Confirm RSVP';
+    }
+  });
+</script>
+
+</body>
+</html>
