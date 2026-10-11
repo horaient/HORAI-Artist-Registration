@@ -1,2 +1,2 @@
-# HORAI-RSVP
-its a HORAI-RSVP website
+# HORAI-Artist Registration
+its a HORAI-Artist Registration website
